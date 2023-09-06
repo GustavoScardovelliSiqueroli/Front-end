@@ -1,0 +1,126 @@
+<!doctype   html>
+<html lang="pt-BT">
+		<head>
+				<meta charset="utf-8">
+				<title>
+						Produtos
+				</title>
+				
+				<link rel="stylesheet" type="text/css" href="formatacao.css" media="screen" />
+		</head>
+		<body>
+
+				<h3><center>Cadastro de Produtos</center></h3>
+				
+				<form action="insere_produtos.php" method="post">
+				
+						<div>
+								<label for="codigo">Código</label>
+								<input type="text" id="codigo" name="codigo"/>
+						</div>
+						<div>
+								<label for="descricao">Descrição</label>
+								<input type="text" id="descricao" name="descricao" />
+						</div>
+						<div class = "sele">
+								<label for="tipo">Tipo</label>
+								<select name="tipo" id="tipo" >
+									<?php
+										$link = mysqli_connect("127.0.0.1", "root", "", "fatec");
+										$sql = "SELECT * from tipos order by otipo";
+										$rs = mysqli_query($link, $sql);
+										
+										while($r = mysqli_fetch_array($rs)){
+											echo '<option value="'.$r['otipo'].'">'.$r['otipo'].'</option>';
+										}
+										mysqli_free_result($rs);
+									
+										mysqli_close($link);
+									?>
+								</select>
+						</div>
+						
+						<div class = "sele">
+								<label for="marca">Marca</label>
+								<select name="marca" id="marca" >
+									<?php
+										$link = mysqli_connect("127.0.0.1", "root", "", "fatec");
+										$sql = "SELECT * from marcas order by omarca";
+										$rs = mysqli_query($link, $sql);
+										
+										while($r = mysqli_fetch_array($rs)){
+											echo '<option value="'.$r['omarca'].'">'.$r['omarca'].'</option>';
+										}
+										mysqli_free_result($rs);
+									
+										mysqli_close($link);
+									?>
+								</select>
+						</div>
+						
+						<div class = "sele">
+								<label for="modelo">Modelo</label>
+								<select name="modelo" id="modelo" >
+									<?php
+										$link = mysqli_connect("127.0.0.1", "root", "", "fatec");
+										$sql = "SELECT * from modelos order by omodelo";
+										$rs = mysqli_query($link, $sql);
+										
+										while($r = mysqli_fetch_array($rs)){
+											echo '<option value="'.$r['omodelo'].'">'.$r['omodelo'].'</option>';
+										}
+										mysqli_free_result($rs);
+									
+										mysqli_close($link);
+									?>
+								</select>
+						</div>
+						
+						<div class = "sele">
+								<label for="fabricante">Fabricante</label>
+								<select name="fabricante" id="fabricante" >
+									<?php
+										$link = mysqli_connect("127.0.0.1", "root", "", "fatec");
+										$sql = "SELECT * from fabricantes order by ofabricante";
+										$rs = mysqli_query($link, $sql);
+										
+										while($r = mysqli_fetch_array($rs)){
+											echo '<option value="'.$r['ofabricante'].'">'.$r['ofabricante'].'</option>';
+										}
+										mysqli_free_result($rs);
+									
+										mysqli_close($link);
+									?>
+								</select>
+						</div>
+						
+						<div>
+								<label for="estoque">Estoque</label>
+								<input type="text" id="estoque" name="estoque"/> 
+						</div>
+						<div>
+								<label for="estoque_minimo">Estoque mínimo</label>
+								<input type="text" id="estoque_minimo" name="estoque_minimo"/>
+						</div>												
+						<div>
+								<label for="preco_compra">Preço Compra</label>
+								<input type="text" id="preco_compra" name="preco_compra"/>
+						</div>
+						<div>
+								<label for="margem_lucro">Margem Lucro</label>
+								<input type="text" id="margem_lucro" name="margem_lucro"/>
+						</div>
+						
+				
+							
+							
+						</div>	
+
+						<div class="button">
+							<button type="submit">Gravar</button>
+							<button type="button" onClick="history.go(-1)">Voltar</button>
+						</div>
+						
+				</form>
+		</body>		
+</html>								

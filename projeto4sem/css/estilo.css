@@ -1,0 +1,92 @@
+body{
+   background-color: grey;
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Optima", sans-serif;
+} 
+
+.centro-cabecalho{
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 1100px;
+   height: 100px;
+   margin: 0 auto;
+   padding: 0 2%;
+   /* border: solid 3px black; */
+}
+.logo{
+   width: 40%;
+   /* border: solid 3px white; */
+   margin-top: 2px;
+}
+header{
+   padding: 20px 0px;
+   /* border: solid 3px blue; */
+}
+.menu{
+   padding-top: 10px;
+   width: 60%;
+   /* border: solid 3px red; */
+   text-align: left;
+
+}
+
+.menu a{
+   color: black;
+   text-decoration: none;
+   font-weight: bolder;
+   font-size: 20px;
+   padding-right: 5px ;
+   /* border: solid 3px black; */
+}
+
+.categorias{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   
+   /* color:darkslategrey; */
+   /* background-color:cadetblue; */
+   /* border: solid 3px darkslategray; */
+
+}
+.categorias p{
+   margin: 7px;
+   font-size: 18px;
+
+
+}
+.texto1{
+   /* border:  solid 3px black; */
+   display: flex;
+
+
+}
+.texto1 p{
+   font-weight: bolder;
+   font-size: 30px;
+   margin-top: 20px ;
+   margin-bottom: 8px;
+}
+.espaco p{
+   height: 50px;
+   /* border: solid 3px black; */
+}
+.centro{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   /* border: solid 3px red; */
+   height: auto;
+   padding-left: 12%;
+   padding-right: 12%;
+
+}
+.centro img{
+   width: 150px;
+   margin: 8px;
+}
+

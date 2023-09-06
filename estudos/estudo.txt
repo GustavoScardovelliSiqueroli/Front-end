@@ -1,0 +1,3 @@
+padding >> afasta o elemento de fora para dentro
+
+margin >> afasta o elemento de dentro para fora

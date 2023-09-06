@@ -1,0 +1,158 @@
+<!doctype   html>
+<html lang="pt-BT">
+		<head>
+				<meta charset="utf-8">
+				<title>
+						Formulario 1
+				</title>
+				
+				<style>
+					form
+					{
+						/* Apenas para centralizar o form na página */
+						margin: 0 auto;
+						width: 400px;
+						/* Para ver as bordas do fomulário */
+						padding: 1em;
+						border: 1px solid #CCC;
+						border-radius: 1em;
+					}
+					
+					form div + div
+					{
+						margin-top: 1em;
+					}
+
+					label
+					{
+						/*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+						display: inline-block;
+						width: 90px;
+						text-align: right;
+					}
+					
+					input
+					{
+						/* Para certificar-se que todos os campos de texto tem as mesmas configurações de fonte */
+						font: 1em sans-serif;
+						/* Para dar o mesmo tamanho a todos os campos de texto */
+						width: 300px;
+						-moz-box-sizing: border-box;
+						box-sizing: border-box;
+						
+						/* Para harmonizar o look e feel das bordas nos campos de texto*/
+						border: 1px solid #999;
+					}
+					
+					input: focus
+					{
+						/* Dar um pouco de destaque nos elementos ativos */
+						border-color: #000;
+					
+					}
+					
+					.button
+					{
+						/* Para posicionar os botões para a mesma posição dos campos de textp*/
+						padding-left: 90px; /* mesmo tamanho q os elementos do tipo label*/  
+					}
+					button
+					{
+						/* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto */
+						margin-left: .5em;
+					
+					}
+					
+					
+					
+				</style>
+		</head>
+		<body>
+
+				<h3><center>Formulario 1</center></h3>
+				
+				<form action="/pagina-processa-dados-do-form" method="post">
+
+						<div>
+								<label for="nome">Nome</label>
+								<input type="text" id="nome"/>
+						</div>
+						<div>
+								<label for="rua">Endereço</label>
+								<input type="text" id="rua"/>
+						</div>
+						<div>
+								<label for="numerocasa">Nº</label>
+								<input type="number" id="numerocasa" name="numerocasa" min="1">
+						</div>
+						<div>
+								<label for="bairro">Bairro</label>
+								<input type="text" id="bairro"/>
+						</div>
+						<div>
+								<label for="cidade">Cidade</label>
+								<input type="text" id="cidade"/>
+						</div>
+						<div>
+								<label for="telefone">Telefone (xxxxx-xxxx)</label>
+								<input pattern="^\d{5}-\d{4}$" type="tel" id="telefone">
+						</div>
+						<div>
+								<label for="cpf">CPF(sem pontuação)</label>
+								<input pattern="^\d{11}$" type="tel" id="cpf"/>
+						</div>
+						<div>
+								<label for="rg">RG(sem pontução)</label>
+								<input pattern="^\d{9}$" type="tel" id="rg"/>
+						</div>
+						<div>
+								<label for="emailfo">E-mail</label>
+								<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" id="emailfo"/>
+						</div>
+						<div>
+								<h4>Sexo:</h4>
+								<input type="radio" id= "Masculino" name="genero" value="masculino">
+								<label for="Masculino">Masculino</label><br><br>
+								<input type="radio" id= "Feminino" name="genero" value="feminino">
+								<label for="Feminino">Feminino</label><br>
+						</div><br>
+						<div>
+								<label for="nascimento">Nascimento</label>
+								<input type="date" id="nascimento" name="nascimento">
+						</div>
+						<div>
+								<h4>Assinale apenas as linguas que domina:</h4>
+								<input type="checkbox" id="lingua1" name="lingua1" value="portugues">
+								<label for="lingua1"> Portugues</label><br><br>
+								<input type="checkbox" id="lingua2" name="lingua2" value="frances">
+								<label for="lingua2">Francês</label><br><br>
+								<input type="checkbox" id="lingua3" name="lingua3" value="ingles">
+								<label for="lingua3"> Inglês</label><br><br>
+								<input type="checkbox" id="lingua4" name="lingua4" value="italiano">
+								<label for="lingua4"> Italiano</label><br><br>
+								<input type="checkbox" id="lingua5" name="lingua5" value="japones">
+								<label for="lingua5"> Japonês</label><br><br>
+								<input type="checkbox" id="lingua6" name="lingua6" value="espanhol">
+								<label for="lingua6"> Espanhol</label>								
+						</div>
+						<div>
+								<h4>A casa onde você mora é:</h4>
+								<input type="radio" id= "casa1" name="casa" value="propria">
+								<label for="casa1">Própria</label><br><br>
+								<input type="radio" id= "casa2" name="casa" value="pagafi">
+								<label for="casa2">Casa própria</label><br><br>
+								<input type="radio" id="casa3" name="casa" value="alugada">
+								<label for="casa3">Alugada</label><br><br>
+								<input type="radio" id="casa4" name="casa" value="favor">
+								<label for="casa4">Mora de favor</label>
+
+						</div>
+								
+								
+						<div class="button">
+								<button type="submit">Gravar</button>
+						</div>
+				</form>
+
+		</body>		
+</html>								

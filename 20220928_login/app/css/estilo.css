@@ -1,0 +1,26 @@
+table{
+    border: 2px solid #000;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+    border: 1px solid #aaa; /* espessura, estila e cor da borda */
+    background-color: #777; 
+    color: #fff;
+    height: 50px;
+}
+
+td{
+    border: 1px solid #aaa;    
+    background-color: #f3f3f3;
+}
+
+tr{
+    height: 35px;
+}
+
+tr:hover td{
+    background-color: #ccc;
+}
+
